@@ -7,6 +7,9 @@ import models.Funcionario;
 
 public class Metodos {
 
+	private static ArrayList<Funcionario> funcionarios = new ArrayList<>();
+	private static Scanner leitura = new Scanner(System.in);
+
 	// Metodo para mostrar o menu na classe Main
 	public static void mostrarMenu() {
 		System.out.println("""
@@ -29,18 +32,38 @@ public class Metodos {
 
 	// Metodo para cadastrar um novo funcionario
 	public static void registrarFuncionario() {
-		Scanner registro = new Scanner(System.in);
-		final ArrayList<Funcionario> funcionarios = new ArrayList<>();
 
 		System.out.print("\nDigite o nome do funcionário: ");
-		String nomeFuncionario = registro.nextLine();
+		String nomeFuncionario = leitura.nextLine();
 		System.out.print("Digite o cargo desse funcionário: ");
-		String cargoFuncionario = registro.nextLine();
+		String cargoFuncionario = leitura.nextLine();
 		Funcionario novoFuncionario = new Funcionario(nomeFuncionario, cargoFuncionario);
 		funcionarios.add(novoFuncionario);
 		System.out.println("Funcionário registrado com sucesso");
-		
-		registro.close();
+
 	}
 
+	// Metodo para listar os empregados registrados
+	public static void listarFuncionarios() {
+
+		if (funcionarios.isEmpty()) {
+
+			System.out.print(
+					"\nNão foi encontrado nenhum funcinário cadastrado. Deseja cadastrar um novo funcionário? (S/N): ");
+			String escolha = leitura.nextLine();
+			if (escolha.equalsIgnoreCase("s")) {
+				registrarFuncionario();
+			} else {
+				System.out.println("Retornando para o menu. ");
+			}
+
+		} else {
+			System.out.println("Funcionários registrados: ");
+			for (Funcionario listaFuncionarios: funcionarios) {
+				System.out.println("Nome do funcionário: "+listaFuncionarios.getNomeFuncionario()+ ", Cargo: "+listaFuncionarios.getCargoFuncionario());
+								
+			}
+		}
+
+	}
 }
