@@ -3,13 +3,10 @@ package application;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
-
 import utilities.Metodos;
 import models.Funcionario;
 
 public class Programa extends Metodos {
-
-	 
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
@@ -24,13 +21,13 @@ public class Programa extends Metodos {
 			sc.nextLine();
 
 			switch (op) {
+			
 			case 1:
 				registrarFuncionario();
 				break;
 
 			case 2:
-				// Listar os empregados registrados
-
+				listarFuncionarios();
 				break;
 
 			case 3:
