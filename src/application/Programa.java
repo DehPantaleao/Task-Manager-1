@@ -9,11 +9,11 @@ import models.Funcionario;
 
 public class Programa extends Metodos {
 
-	private static Scanner sc = new Scanner(System.in);
-	private static ArrayList<Funcionario> funcionarios = new ArrayList<>();
+	 
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
 
 		int op = -1;
 
@@ -25,7 +25,7 @@ public class Programa extends Metodos {
 
 			switch (op) {
 			case 1:
-				// Registrando um novo empregado
+				registrarFuncionario();
 				break;
 
 			case 2:
