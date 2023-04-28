@@ -22,4 +22,8 @@ public class Funcionario {
 		return cargoFuncionario;
 	}
 
+	public void setCargoFuncionario(String cargoFuncionario) {
+		this.cargoFuncionario = cargoFuncionario;
+	}
+
 }
