@@ -31,8 +31,7 @@ public class Programa extends Metodos {
 				break;
 
 			case 3:
-				// Criar uma nova tarefa
-
+				criarTarefas();
 				break;
 
 			case 4:
