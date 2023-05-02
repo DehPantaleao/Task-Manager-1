@@ -35,7 +35,7 @@ public class Programa extends Metodos {
 				break;
 
 			case 4:
-				// Listas todas as tarefas ativas
+				listarTarefas();
 
 				break;
 

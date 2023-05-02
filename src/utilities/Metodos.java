@@ -109,4 +109,18 @@ public class Metodos {
 		System.out.println("Tarefa criada com sucesso!");
 	}
 
+	// Metodo para listar Tarefas
+	public static void listarTarefas() {
+		if (tarefas.isEmpty()) {
+			System.out.println("Não há tarefas registradas.");
+		} else {
+			System.out.println("Tarefas ativas:");
+			for (Tarefas listarTarefas : tarefas) {
+				System.out.println("Nome da tarefa: " + listarTarefas.getNomeTarefa() + ", Funcionario atribuido: "
+						+ listarTarefas.getFuncionarioAtribuido().getNomeFuncionario() + ", descrição: "
+						+ listarTarefas.getDescricaoTarefa() + ", data de criação: "
+						+ listarTarefas.getDataTarefaCriada());
+			}
+		}
+	}
 }
