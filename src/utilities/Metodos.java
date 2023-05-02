@@ -13,7 +13,7 @@ public class Metodos {
     private static ArrayList<Tarefas> tarefas = new ArrayList<>();
     private static Scanner leitura = new Scanner(System.in);
 
-    // Metodo para mostrar o menu na classe Main
+
     public static void mostrarMenu() {
         System.out.println("""
                                 ______________________________________________
@@ -35,7 +35,7 @@ public class Metodos {
                 """);
     }
 
-    // Metodo para cadastrar um novo funcionario
+
     public static void registrarFuncionario() {
         System.out.println("=====================================================");
         System.out.print("\nDigite o nome do funcionário: ");
@@ -48,7 +48,7 @@ public class Metodos {
         System.out.println("=====================================================\n");
     }
 
-    // Metodo para listar os empregados registrados
+
     public static void listarFuncionarios() {
 
         if (funcionarios.isEmpty()) {
@@ -74,7 +74,6 @@ public class Metodos {
         }
 
     }
-    // Metodo para criar uma tarefa
 
     public static void criarTarefas() {
         System.out.println("Criando uma nova tarefa: ");
@@ -86,7 +85,7 @@ public class Metodos {
         Funcionario funcionarioExiste = null;
 
         for (Funcionario func : funcionarios) {
-            if (func.getNomeFuncionario().equals(funcionarioAtribuido)) {
+            if (func.getNomeFuncionario().equalsIgnoreCase(funcionarioAtribuido)) {
                 funcionarioExiste = func;
                 break;
             }
@@ -106,14 +105,13 @@ public class Metodos {
         String descricaoTarefa = leitura.nextLine();
 
         LocalDate dataTarefaCriada = LocalDate.now();
-        Tarefas novaTarefa = new Tarefas(nomeTarefa, funcionarioExiste, descricaoTarefa, dataTarefaCriada);
+        Tarefas novaTarefa = new Tarefas(nomeTarefa, funcionarioAtribuido, descricaoTarefa, dataTarefaCriada);
 
         tarefas.add(novaTarefa);
 
         System.out.println("Tarefa criada com sucesso!");
     }
 
-    // Metodo para listar Tarefas
     public static void listarTarefas() {
         if (tarefas.isEmpty()) {
             System.out.println("=====================================================");
@@ -124,7 +122,7 @@ public class Metodos {
             System.out.println("Tarefas ativas:");
             for (Tarefas listarTarefas : tarefas) {
                 System.out.println("Nome da tarefa: " + listarTarefas.getNomeTarefa() + ", Funcionario atribuido: "
-                        + listarTarefas.getFuncionarioAtribuido().getNomeFuncionario() + ", descrição: "
+                        + (listarTarefas.getFuncionarioAtribuido() == null ? "Nenhum funcionário atribuído" : listarTarefas.getFuncionarioAtribuido()) + ", descrição: "
                         + listarTarefas.getDescricaoTarefa() + ", data de criação: "
                         + listarTarefas.getDataTarefaCriada());
             }
@@ -234,4 +232,6 @@ public class Metodos {
 
         }
     }
+
+
 }
