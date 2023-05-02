@@ -55,7 +55,7 @@ public class Programa extends Metodos {
                     break;
 
                 case 6:
-                    // Excluir uma tarefa
+                    excluirTarefas();
                     break;
 
                 case 0:
