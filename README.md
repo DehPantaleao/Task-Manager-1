@@ -77,3 +77,9 @@ ______________________________________________
 
 <h1><br><b>Equipe: </b></h1>
 
+https://github.com/viniciusvk1<br>
+https://github.com/alanismayra<br>
+https://github.com/brunoo-lcf<br>
+https://github.com/DehPantaleao<br>
+https://github.com/slyblur<br>
+https://github.com/wmgaspar<br>
