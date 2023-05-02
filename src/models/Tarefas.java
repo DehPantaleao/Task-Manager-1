@@ -5,12 +5,12 @@ import java.time.LocalDate;
 public class Tarefas {
 
 	private String nomeTarefa;
-	private Funcionario funcionarioAtribuido;
+	private String funcionarioAtribuido;
 	private String descricaoTarefa;
 	private LocalDate dataTarefaCriada;
 
-	public Tarefas(String nomeTarefa, Funcionario funcionarioAtribuido, String descricaoTarefa,
-			LocalDate dataTarefaCriada) {
+	public Tarefas(String nomeTarefa, String funcionarioAtribuido, String descricaoTarefa,
+				   LocalDate dataTarefaCriada) {
 		this.nomeTarefa = nomeTarefa;
 		this.funcionarioAtribuido = funcionarioAtribuido;
 		this.descricaoTarefa = descricaoTarefa;
@@ -25,12 +25,12 @@ public class Tarefas {
 		this.nomeTarefa = nomeTarefa;
 	}
 
-	public Funcionario getFuncionarioAtribuido() {
+	public String getFuncionarioAtribuido() {
 		return funcionarioAtribuido;
 	}
 
 	public void setFuncionarioAtribuido(Funcionario funcionarioAtribuido) {
-		this.funcionarioAtribuido = funcionarioAtribuido;
+		this.funcionarioAtribuido = String.valueOf(funcionarioAtribuido);
 	}
 
 	public String getDescricaoTarefa() {

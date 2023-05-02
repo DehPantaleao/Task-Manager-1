@@ -56,7 +56,6 @@ public class Programa extends Metodos {
 
                 case 6:
                     // Excluir uma tarefa
-
                     break;
 
                 case 0:
