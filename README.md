@@ -11,22 +11,22 @@ O código foi escrito em Java, uma linguagem de programação orientada a objeto
 1. Depois de executar a classe Program, o menu a seguir será exibido no console:<br><br>
 
 ~~~
-                                ______________________________________________
-                                |			 Escolha uma Opção			     |
-                                ______________________________________________
-                                |											 |
-                                |	1 - Registrar um novo funcionário	     |
-                                |	2 - Listar os funcionário registrados	 |
-                                |	3 - Criar uma nova tarefa				 |
-                                |	4 - Listas todas as tarefas ativas		 |
-                                |	5 - Editar uma tarefa existente			 |
-                                |	6 - Excluir uma tarefa					 |
-                                |	0 - Sair do programa					 |
-                                |											 |
-                                ______________________________________________
-                                |        Escolha uma opção listada           |
-                                |    (Digite e pressione o botão Enter):     |
-                                ______________________________________________
+______________________________________________
+|	        Escolha uma Opção            |
+______________________________________________
+|				    	     |
+|	1 - Registrar um novo funcionário    |
+|	2 - Listar os funcionário registrados|
+|	3 - Criar uma nova tarefa            |
+|	4 - Listas todas as tarefas ativas   |
+|	5 - Editar uma tarefa existente	     |
+|	6 - Excluir uma tarefa               |
+|	0 - Sair do programa                 |
+|                                            |
+______________________________________________
+|        Escolha uma opção listada           |
+|    (Digite e pressione o botão Enter):     |
+______________________________________________
 ~~~
 
 <br><br>2. Siga as instruções fornecidas no menu para interagir com o programa.<br><br>
@@ -77,4 +77,3 @@ O código foi escrito em Java, uma linguagem de programação orientada a objeto
 
 <h1><br><b>Equipe: </b></h1>
 
-@viniciusvk1 @DehPantaleao @slyblur @alanismayra @brunoo-lcf
