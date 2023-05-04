@@ -26,4 +26,8 @@ public class Funcionario {
 		this.cargoFuncionario = cargoFuncionario;
 	}
 
+	@Override
+	public String toString() {
+		return nomeFuncionario;
+	}
 }

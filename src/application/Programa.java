@@ -13,22 +13,11 @@ public class Programa extends Metodos {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("""
-                        _______                 _        __  __                                              
-                      |__   __|               | |      |  \\/  |                                             
-                          | |      __ _   ___  | | __   | \\  / |   __ _   _ __     __ _    __ _    ___   _ __
-                          | |     / _` | / __| | |/ /   | |\\/| |  / _` | | '_ \\   / _` |  / _` |  / _ \\ | '__|
-                          | |    | (_| | \\__ \\ |   <    | |  | | | (_| | | | | | | (_| | | (_| | |  __/ | |  
-                          |_|     \\__,_| |___/ |_|\\_\\   |_|  |_|  \\__,_| |_| |_|  \\__,_|  \\__, |  \\___| |_|  
-                                                                                           __/ |             
-                                                                                          |___/              
-                """);
-
         int op = -1;
 
         do {
             mostrarMenu();
-            System.out.print("\t\t\t\t\t\t\t\tESCOLHA: ");
+            System.out.print("ESCOLHA: ");
             op = sc.nextInt();
             sc.nextLine();
 
