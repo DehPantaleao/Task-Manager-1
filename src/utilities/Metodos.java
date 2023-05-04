@@ -35,7 +35,6 @@ public class Metodos {
     }
 
     public static void registrarFuncionario() {
-        System.out.println("=====================================================");
         System.out.print("\nDigite o nome do funcionário: ");
         String nomeFuncionario = leitura.nextLine();
         System.out.print("Digite o cargo desse funcionário: ");
@@ -43,33 +42,27 @@ public class Metodos {
         Funcionario novoFuncionario = new Funcionario(nomeFuncionario, cargoFuncionario);
         funcionarios.add(novoFuncionario);
         System.out.println("Funcionário registrado com sucesso\n");
-        System.out.println("=====================================================\n");
     }
 
     public static void listarFuncionarios() {
 
         if (funcionarios.isEmpty()) {
-            System.out.println("=====================================================");
-            System.out.print(
-                    "\nNão foi encontrado nenhum funcinário cadastrado. Deseja cadastrar um novo funcionário? (S/N): ");
+            System.out.print("\nNão foi encontrado nenhum funcionário cadastrado. Deseja cadastrar um novo funcionário? (S/N): ");
             String escolha = leitura.nextLine();
             if (escolha.equalsIgnoreCase("s")) {
                 registrarFuncionario();
             } else {
-                System.out.println("Retornando para o menu. ");
-                System.out.println("=====================================================\n");
+                System.out.println("Retornando para o menu.\n");
             }
 
         } else {
-            System.out.println("=====================================================");
             System.out.println("\nFuncionários registrados: ");
             for (Funcionario listaFuncionarios : funcionarios) {
                 System.out.println("Nome do funcionário: " + listaFuncionarios.getNomeFuncionario() + ", Cargo: "
                         + listaFuncionarios.getCargoFuncionario());
             }
-            System.out.println("\n=====================================================");
         }
-
+        System.out.println("\n");
     }
 
     public static void criarTarefas() {
@@ -111,11 +104,8 @@ public class Metodos {
 
     public static void listarTarefas() {
         if (tarefas.isEmpty()) {
-            System.out.println("=====================================================");
             System.out.println("Não há tarefas registradas.");
-            System.out.println("=====================================================");
         } else {
-            System.out.println("=====================================================");
             System.out.println("Tarefas ativas:");
             for (Tarefas listarTarefas : tarefas) {
                 System.out.println("Nome da tarefa: " + listarTarefas.getNomeTarefa() + ", Funcionario atribuido: "
@@ -124,7 +114,6 @@ public class Metodos {
                         + ", descrição: " + listarTarefas.getDescricaoTarefa() + ", data de criação: "
                         + listarTarefas.getDataTarefaCriada());
             }
-            System.out.println("=====================================================");
         }
     }
 
@@ -176,7 +165,7 @@ public class Metodos {
 
             switch (escolha) {
                 case 1:
-                    System.out.println("Digite um novo nome para a tarefa: " + tarefasParaEditar);
+                    System.out.print("Digite um novo nome para a tarefa: ");
                     String novoNome = leitura.nextLine();
                     tarefasParaEditar.setNomeTarefa(novoNome);
                     System.out.println("Tarefa editada com sucesso");
@@ -196,7 +185,7 @@ public class Metodos {
                     }
 
                     if (funcionarioExiste == null) {
-                        System.out.println("Funcionario nao encontrado! Deseja cadastrar um novo funcionario? (S/N): ");
+                        System.out.print("Funcionario nao encontrado! Deseja cadastrar um novo funcionario? (S/N): ");
                         String escolhaCadastrar = leitura.nextLine();
                         if (escolhaCadastrar.equalsIgnoreCase("s")) {
                             registrarFuncionario();
